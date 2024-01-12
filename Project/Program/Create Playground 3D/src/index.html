@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Primary Meta Tags -->
+    <title>Playground</title>
+    <meta name="title" content="Playground">
+    <meta name="description" content="a WebGL experience, Music Visualizer with Nostalgia Feels built with Three.js">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Playground">
+    <meta property="og:description" content="a WebGL experience, Music Visualizer with Nostalgia Feels built with Three.js">
+    <meta property="og:image" content="https://raw.githubusercontent.com/duongve13112002/playground-main-project/main/static/img/meta.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Playground">
+    <meta property="twitter:description" content="a WebGL experience, Music Visualizer with Nostalgia Feels built with Three.js">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/duongve13112002/playground-main-project/main/static/img/meta.jpg">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nanum+Brush+Script&family=Schoolbell&display=swap" rel="stylesheet">
+    
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+</head>
+<body>
+    <div>
+        <canvas class="webgl"></canvas>
+    </div>
+
+    <div class="loading-screen noselect">
+        <div class="middle">
+            <div class="inner">
+                <span class="counter noselect">0%</span><br>
+                <span class="loading-txt noselect">
+                    <span class="iconify-inline noselect" data-icon="emojione:warning"></span> Warning: Heavy Web Application <br>
+                    <span class="iconify-inline noselect" data-icon="ic:round-headset"></span> Please use headphone for full experience <br>
+                    <span class="loading-btn noselect cursor-pointer">Engage</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="menu-title text1">
+                <p class="title-text noselect">Playground</p>
+            </div>
+    
+            <div class="name text1">
+                <p class="name-text noselect">
+                by <br>
+                Duong
+                </p>
+            </div>
+            <div class="menu-btn-group" >
+                <div class="start-btn text2 noselect cursor-pointer"><p class="start-text noselect">Start</p></div>
+                <div class="explore-btn text2 noselect cursor-pointer"><p class="explore-text noselect">Explore</p></div>
+                <div class="about-btn text2 noselect cursor-pointer"><p class="about-text noselect">About</p></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="point point-0">
+        <div class="label">
+            <span class="iconify-inline noselect" data-icon="ion:eye"></span>
+        </div>
+        <div class="desc noselect">
+            hey, come here! <br>
+            this location have unique view
+        </div>
+    </div>
+
+    <div class="point point-1">
+        <div class="label">
+            <span class="iconify-inline noselect" data-icon="ion:eye"></span>
+        </div>
+        <div class="desc noselect">
+            a slide? <br> 
+            yes!
+        </div>
+    </div>
+
+    <div class="point point-2">
+        <div class="label">
+            <span class="iconify-inline noselect" data-icon="ion:eye"></span>
+        </div>
+        <div class="desc noselect">
+            too high! <br> 
+            i'm scared 
+        </div>
+    </div>
+
+    <div class="point point-3">
+        <div class="label">
+            <span class="iconify-inline noselect" data-icon="bx:bx-chair"></span>
+        </div>
+        <div class="desc noselect">
+            tired? <br> 
+            sit here
+        </div>
+    </div>
+
+    <div class="point point-4">
+        <div class="label">
+            <span class="iconify-inline noselect" data-icon="bx:bx-chair"></span>
+        </div>
+        <div class="desc noselect">
+            that seems nice <br> 
+            let's sit here
+        </div>
+    </div>
+    
+    <div class="point point-5">
+        <div class="label">
+            <span class="iconify-inline noselect" data-icon="ion:eye"></span>
+        </div>
+        <div class="desc noselect">
+            chilling on the swing? <br> 
+            why not
+        </div>
+    </div>
+
+    <div class="poi-btn cursor-pointer">
+        <span class="icon-change">
+            <span class="iconify-inline noselect" data-icon="ion:eye-off"></span>
+        </span>
+        <div class="hide-txt noselect">Hide</div>
+    </div>
+
+    <div class="play-btn cursor-pointer">
+        <span class="icon-change">
+            <span class="iconify-inline noselect" data-icon="ion:play"></span>
+        </span>
+        <div class="hide-txt noselect">Play</div>
+    </div>
+
+    <div class="stop-btn cursor-pointer">
+        <span class="iconify-inline noselect" data-icon="ion:stop"></span>
+        <div class="hide-txt noselect">Stop</div>
+    </div>
+
+    <div class="back-btn noselect cursor-pointer">
+        <span class="icon-change">
+            <span class="iconify-inline" data-icon="ion:arrow-back"></span>
+        </span>
+        <div class="hide-txt noselect">Menu</div>
+    </div>
+
+    <div class="reset-btn cursor-pointer">
+        <span class="icon-change">
+            <span class="iconify-inline noselect" data-icon="icon-park-outline:reload"></span>
+        </span>
+        <div class="hide-txt noselect">Reloc</div>
+    </div>
+
+    <div class="screen-icon noselect cursor-pointer">
+        <span class="iconify-inline noselect" data-icon="ic:round-fullscreen"></span>
+    </div>
+
+    <div class="help-btn noselect cursor-pointer">
+        <span class="noselect">?</span>
+    </div>
+
+    <div class="about-container">
+        <div class="about-mid">
+            <div class="close-btn">
+                <span class="iconify-inline noselect cursor-pointer" data-icon="eva:close-circle-fill"></span>
+            </div>
+            <div class="about">
+                <p>
+                    <span class="about-title noselect">About</span>
+                    <span class="iconify-inline flag flag-us noselect cursor-pointer" data-icon="emojione:flag-for-united-states"></span>
+                    <span class="iconify-inline flag flag-vn noselect cursor-pointer" data-icon="emojione:flag-for-vietnam"></span>
+                </p>
+                <p class="about-txt noselect">
+                    Hi, I'm Duong, the developer behind this web application welcoming you. 
+                    Why did I make this website? Well, back then I come to the idea of nostalgia when 
+                    I look at the playground near my home. Then I thought, "what if I create digital recreation
+                    about playing or chilling at a playground that makes people feel nostalgic and peaceful?", 
+                    so I make this simple web application.
+                </p>
+                <p class="tools-txt noselect">
+                    Techs
+                    <span class="tools-icon noselect">
+                        <span class="iconify-inline noselect tool-icon" data-icon="simple-icons:threedotjs"></span>
+                        <span class="iconify-inline noselect tool-icon" data-icon="simple-icons:webgl"></span>
+                        <span class="iconify-inline noselect tool-icon" data-icon="simple-icons:greensock"></span>
+                        <span class="iconify-inline noselect tool-icon" data-icon="cib:html5"></span>
+                        <span class="iconify-inline noselect tool-icon" data-icon="cib:js"></span>
+                        <span class="iconify-inline noselect tool-icon" data-icon="ci:css3"></span>
+                        <span class="iconify-inline noselect tool-icon" data-icon="fad:logo-fl"></span>
+                        <span class="iconify-inline noselect tool-icon" data-icon="bx:bxl-blender"></span>
+                        <span class="iconify-inline noselect tool-icon" data-icon="cib:krita"></span>
+                        <span class="iconify-inline noselect tool-icon" data-icon="simple-icons:gimp"></span>
+                    </span>
+                </p>
+                <p class="socials-txt noselect">
+                    Socials
+                    <span class="socials-icon noselect">
+                        <span class="iconify-inline noselect social-icon github cursor-pointer" data-icon="akar-icons:github-fill"></span>
+                        <span class="iconify-inline noselect social-icon facebook cursor-pointer" data-icon="logos:facebook"></span>
+                        <span class="iconify-inline noselect social-icon twitter cursor-pointer" data-icon="logos:twitter"></span>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="helper-container noselect">
+        <div class="helper-mid noselect">
+            <div class="helper-close-btn cursor-pointer">
+                <span class="iconify-inline noselect" data-icon="eva:close-circle-fill"></span>
+            </div>
+            <div class="help scroll noselect">
+                <p>
+                    <span class="help-title noselect">Start</span><br>
+                    <span class="help-desc noselect">start autoplaying music and camera, so you can just chill</span><br><br><br>
+                </p>
+                <p>
+                    <span class="help-title noselect">Explore</span><br>
+                    <span class="help-desc noselect">if you want to explore the playground</span><br><br><br>
+                </p>
+                <p>
+                    <span class="help-title noselect">About</span><br>
+                    <span class="help-desc noselect">short story about this website</span><br><br><br>
+                </p>
+                <p>
+                    <span class="help-title noselect"> 
+                        <span class="iconify-inline noselect" data-icon="ion:arrow-back"></span>
+                        Menu
+                    </span><br>
+                    <span class="help-desc noselect">back to the main menu</span><br><br><br>
+                </p>
+                <p>
+                    <span class="help-title noselect">
+                        <span class="iconify-inline noselect" data-icon="ic:round-fullscreen"></span>
+                        Fullscreen
+                    </span><br>
+                    <span class="help-desc noselect">to fullscreen mode</span><br><br><br>
+                </p>
+                <p>
+                    <span class="help-title noselect">Explore : 
+                        <span class="iconify-inline noselect" data-icon="bx:bx-chair"></span>
+                        <span class="iconify-inline noselect" data-icon="ion:eye"></span>
+                        Point of Interest
+                    </span><br>
+                    <span class="help-desc noselect">you can click this</span><br><br><br>
+                </p>
+                <p>
+                    <span class="help-title noselect">Explore : 
+                        <span class="iconify-inline noselect" data-icon="icon-park-outline:reload"></span>
+                        Reloc 'reset location'
+                    </span><br>
+                    <span class="help-desc noselect">after clicking one of the PoI, consider clicking this to reset location</span><br><br><br>
+                </p>
+                <p>
+                    <span class="help-title noselect">Explore : 
+                        <span class="iconify-inline noselect" data-icon="ion:eye"></span>
+                        <span class="iconify-inline noselect" data-icon="ion:eye-off"></span>
+                        Show / Hide
+                    </span><br>
+                    <span class="help-desc noselect">hide PoI to clean the interface</span><br><br><br>
+                </p>
+                <p>
+                    <span class="help-title noselect">Explore : 
+                        <span class="iconify-inline noselect" data-icon="ion:play"></span>
+                        <span class="iconify-inline noselect" data-icon="ion:pause"></span>
+                        Play / Pause
+                    </span><br>
+                    <span class="help-desc noselect">play and pause music</span><br><br><br>
+                </p>
+                <p>
+                    <span class="help-title noselect">Explore : 
+                        <span class="iconify-inline noselect" data-icon="ion:stop"></span>
+                        Stop
+                    </span><br>
+                    <span class="help-desc noselect">stop the music</span><br><br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <span class="iconify-inline hidden-icon" data-icon="ion:pause"></span>
+        <span class="iconify-inline hidden-icon" data-icon="ion:eye-off"></span>
+    </div>
+</body>
+</html>
